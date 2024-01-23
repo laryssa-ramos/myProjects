@@ -1,0 +1,160 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(142, 52, 96);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.html{
+    color: aqua;
+}
+
+.css{
+    color: blue;
+}
+.js{
+    color: deeppink;
+}
+
+.tec{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    margin-top: 6.6rem;
+}
+
+.box-container{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 30px 9% 20px;
+    max-width:698px;
+    margin: auto;
+}
+
+
+.box-container .box{
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+   
+}
+
+.box-container .box a{
+    text-decoration: none;
+}
+.box-container .box .img{
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.box-container .box .img a img{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: all .1s linear;
+   
+}
+
+.box-container .box .img a img:hover{
+   transform: scale(1.1);
+}
+
+.box-container .box .title{
+    display: block;
+    margin: .8rem 0;
+    font-weight: bold;
+    color: black;
+}
+
+.box-container .box .title:hover{
+    text-decoration: underline;
+}
+
+footer{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    color: white;
+}
+
+footer .social-media {
+   width: 20%;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: .6rem;
+   
+}
+
+footer .line{
+    width: 90%;
+    height: 1px;
+    background: rgb(145, 145, 145);
+}
+
+footer .social-media i{
+    font-size: 2rem;
+    transition: all .2s linear;
+}
+
+footer .social-media i:hover{
+    color: rgb(155, 81, 224);
+}
+
+footer .social-media i{
+    font-size: 2rem;
+}
+
+
+footer .social-media a:link,
+a:visited{
+    color: #fff;
+}
+
+
+footer .name{
+    margin-top: .6rem;
+    font-size: .85rem;
+}
+
+footer .name strong{
+    color: rgb(155, 81, 224);
+}
+
+
+
+
+@media (max-width: 672px){
+    html{
+        font-size: 85%;
+    }
+
+    .header{
+       height: 60px;
+       
+    }
+
+    .header .logo-container{
+        margin-left: 1rem;
+    }
+
+    footer .social-media {
+        width: 40%;
+     }
+
+}

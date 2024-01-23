@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+html{
+font-size: 16px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+   
+}
+
+.header .logo-container{
+    margin: .4rem 0 0 3.5rem;
+}
+.header .logo{
+    font-family: 'Parisienne', cursive;
+    display: block;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.header .down{
+    margin: -.5rem 0 0 2rem;
+}
+
+.header .home{
+    padding-right: 3.5rem;
+}
+
+.header .home a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .2s linear;
+}
+
+.header .home a:hover{
+    color: rgb(155, 81, 224);;
+}
+
+@media (max-width: 672px){
+    
+    .header .logo-container{
+        margin-left: 1.5rem;
+    }
+
+    .header .home{
+        padding-right: 2rem;
+    }
+    
+      
+
+}
