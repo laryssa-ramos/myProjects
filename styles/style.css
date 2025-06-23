@@ -181,6 +181,13 @@ footer .name strong{
 }
 
 
+@media (max-width: 842px){
+    .main{
+        margin: auto 15px 30px;
+
+    }
+
+}
 
 
 @media (max-width: 672px){
@@ -212,5 +219,5 @@ footer .name strong{
    max-width: 16rem;
    
    
-}
+    }
 }
