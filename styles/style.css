@@ -7,6 +7,7 @@
 body{
     background: rgb(142, 52, 96);
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .html{
@@ -75,6 +76,7 @@ h1{
     margin-bottom: 30px;
     text-align: left;
     padding-bottom: 30px;
+    align-items: center;
 }
 
 .main h2{
@@ -137,6 +139,26 @@ h1{
 .box-container .box .title:hover{
     text-decoration: underline;
 }
+
+.inicio{
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    
+}
+
+.inicio a{
+    margin: auto;
+    text-decoration: none;
+   
+    color:  rgb(142, 52, 96);
+}
+
+.inicio a:hover{
+    color:  rgb(249, 252, 147);
+}
+
+
 
 footer{
     background: black;
