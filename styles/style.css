@@ -69,6 +69,7 @@ h1{
 
 .main h2{
     margin-top: 15px;
+    font-size: 1.3rem;
 }
 
 .main .p{
@@ -216,7 +217,7 @@ footer .name strong{
 
   .main .container .img img{
   
-   max-width: 16rem;
+   max-width: 20rem;
    
    
     }
