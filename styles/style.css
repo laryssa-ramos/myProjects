@@ -172,6 +172,59 @@ h1{
 }
 
 
+footer .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+footer .social .fab{
+    background-color: var(--black);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 2.5rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+footer .social .fab:hover{
+    color: rgb(142, 52, 96);
+    transition: all .2s ease;
+
+}
+
+.fas,
+.fab {
+  border-radius: 50%;
+  color: var(--purple);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+
 
 footer{
     background: black;
@@ -184,7 +237,6 @@ footer{
 }
 
 footer .social-media {
-   width: 20%;
    display: flex;
    justify-content: space-between;
    margin-bottom: .6rem;
@@ -250,10 +302,6 @@ footer .name strong{
     .header .logo-container{
         margin-left: 1rem;
     }
-
-    footer .social-media {
-        width: 40%;
-     }
 
 }
 
