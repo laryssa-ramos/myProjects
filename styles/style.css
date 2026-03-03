@@ -6,11 +6,12 @@
 body {
     background: rgb(142, 52, 96);
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh
+    
 }
 
-html{
-    height: 100vh;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 .html {
@@ -36,6 +37,12 @@ html{
 
 .tec {
     font-weight: bold;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -251,7 +258,6 @@ h1 {
 .email {
     color: white;
 }
-
 
 footer .social {
     display: -webkit-box;
