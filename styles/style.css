@@ -81,7 +81,7 @@ h1 {
 .main {
     max-width: 70%;
     border-radius: 10px;
-    background: rgb(255, 255, 255);
+    background: rgb(217, 217, 217);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     padding: 1.563rem;
     margin: auto;
@@ -375,6 +375,10 @@ footer .name strong {
 
 
 @media (max-width: 842px) {
+
+    .main{
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 770px) {
@@ -387,6 +391,16 @@ footer .name strong {
 
     }
 }
+
+ @media (max-width: 550px) {
+
+       .main .container .img img {
+
+        max-width: 30rem;
+    }
+
+ }
+
 
 @media (max-width: 672px) {
     html {
@@ -410,7 +424,7 @@ footer .name strong {
 
     .main .container .img img {
 
-        max-width: 20rem;
+        max-width: 22rem;
 
 
     }
