@@ -77,6 +77,7 @@ h1 {
 
 }
 
+
 .main {
     max-width: 70%;
     border-radius: 10px;
@@ -195,7 +196,7 @@ h1 {
 }
 
 .line {
-    width: 90%;
+    width: 80%;
     height: 1px;
     background: rgb(145, 145, 145);
     margin: 0 auto;
