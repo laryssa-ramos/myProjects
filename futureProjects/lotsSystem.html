@@ -21,23 +21,45 @@
     </header>
 
 
-    <h1 style="margin-bottom: 20px;">Lots Therapy System</h1>
+    <h1 style="margin-bottom: 20px;">Lots Cms</h1>
     <div class="main">
-        <p class="p"><strong>Descrição:</strong> Sistema de cadastro de produtos que estou desenvolvendo com Angular e SpringBoot para o catálogo do site <a href="https://lotstherapy.com.br/" target="_blank">Lots Therapy</a>.
+        <p class="p"><strong>Descrição:</strong> Sistema de cadastro e edição de produtos desenvolvido com Angular e SpringBoot para o catálogo do site <a href="https://lotstherapy.com.br/" target="_blank">Lots Therapy</a>.
 
         <div class="container">
-            <h2>Painel do Sistema</h2>
-            <div class="img">
+            <h2 class="title-description">Tela de Login</h2>
+            <div class="img img-zoom">
                 <img src="../images/lotsSystem/lots.png" alt="">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
 
-            <div class="img">
+            <h2 class="title-description">Painel do Sistema</h2>
+
+            <div class="img img-zoom">
                 <img src="../images/lotsSystem/lots1.png" alt="">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
 
-            <div class="img">
+            <h2 class="title-description">Tela de Cadastro de Produtos</h2>
+
+            <div class="img img-zoom">
                 <img src="../images/lotsSystem/lots2.png" alt="">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
+
+            <h2 class="title-description">Tela de Edição de Produtos</h2>
+
+            <div class="img img-zoom">
+                <img src="../images/lotsSystem/lots3.png" alt="">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+            </div>
+
+            <h2 class="title-description">Tela de Visualização de Produtos</h2>
+
+            <div class="img img-zoom">
+                <img src="../images/lotsSystem/lots4.png" alt="">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+            </div>
+
         </div>
     </div>
 
@@ -45,7 +67,30 @@
 
     <div id="footer"></div>
 
+    <!-- Modal Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" />
+    </div>
+
     <script src="../js/loader.js"></script>
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('.main .img img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function () {
+          lightboxImg.src = this.src;
+          lightboxImg.alt = this.alt;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightbox.addEventListener('click', function () {
+        lightbox.classList.remove('active');
+      });
+    </script>
 </body>
 
 </html>
