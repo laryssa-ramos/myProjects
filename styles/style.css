@@ -65,23 +65,25 @@ h2 {
 }
 
 .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 30px 9% 20px;
-    max-width: 698px;
+    max-width: 1050px;
     margin: auto;
 }
 
 
 .box-container .box {
     border-radius: 10px;
-    background: #ffffff;
+    background: #f1f1f1;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     padding: 15px;
     cursor: pointer;
     text-align: center;
-
+    flex: 0 1 calc((100% - 40px) / 3);
+    min-width: 250px;
 }
 
 .box-system{
@@ -93,7 +95,7 @@ h2 {
 .main {
     max-width: 60%;
     border-radius: 10px;
-    background: rgb(255, 255, 255);
+    background: rgb(228, 228, 228);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     padding: 1.563rem;
     margin: auto;
@@ -456,6 +458,46 @@ footer .name strong {
 
 .lightbox-close:hover {
     color: rgb(203, 73, 225);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lightbox-nav:hover {
+    color: rgb(203, 73, 225);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 14px;
+    border-radius: 6px;
 }
 
 @media (max-width: 842px) {

@@ -23,7 +23,8 @@
 
     <h1 style="margin-bottom: 20px;">Lots Cms</h1>
     <div class="main">
-        <p class="p"><strong>Descrição:</strong> Sistema de cadastro e edição de produtos desenvolvido com Angular e SpringBoot para o catálogo do site <a href="https://lotstherapy.com.br/" target="_blank">Lots Therapy</a>.
+        <p class="p"><strong>Descrição:</strong> Sistema de cadastro e edição de produtos desenvolvido com Angular e
+            SpringBoot para o catálogo do site <a href="https://lotstherapy.com.br/" target="_blank">Lots Therapy</a>.
 
         <div class="container">
             <h2 class="title-description">Tela de Login</h2>
@@ -46,17 +47,17 @@
                 <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
 
-            <h2 class="title-description">Tela de Edição de Produtos</h2>
-
-            <div class="img img-zoom">
-                <img src="../images/lotsSystem/lots3.png" alt="">
-                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-            </div>
-
             <h2 class="title-description">Tela de Visualização de Produtos</h2>
 
             <div class="img img-zoom">
                 <img src="../images/lotsSystem/lots4.png" alt="">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+            </div>
+
+            <h2 class="title-description">Tela de Edição de Produtos</h2>
+
+            <div class="img img-zoom">
+                <img src="../images/lotsSystem/lots3.png" alt="">
                 <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
 
@@ -69,27 +70,65 @@
 
     <!-- Modal Lightbox -->
     <div class="lightbox-overlay" id="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <img class="lightbox-img" id="lightbox-img" />
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</span>
+        <img class="lightbox-img" id="lightbox-img" />
+        <span class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</span>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
     <script src="../js/loader.js"></script>
     <script>
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const images = Array.from(document.querySelectorAll('.main .img img'));
+        let currentIndex = 0;
 
-      document.querySelectorAll('.main .img img').forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', function () {
-          lightboxImg.src = this.src;
-          lightboxImg.alt = this.alt;
-          lightbox.classList.add('active');
+        function showImage(index) {
+            currentIndex = (index + images.length) % images.length;
+            const img = images[currentIndex];
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            const title = img.closest('.container')
+                ? img.closest('.img').previousElementSibling?.textContent || ''
+                : '';
+            lightboxCaption.textContent = `${title} (${currentIndex + 1}/${images.length})`;
+        }
+
+        images.forEach((img, i) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                showImage(i);
+                lightbox.classList.add('active');
+            });
         });
-      });
 
-      lightbox.addEventListener('click', function () {
-        lightbox.classList.remove('active');
-      });
+        document.getElementById('lightbox-close').addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightbox.classList.remove('active');
+        });
+
+        document.getElementById('lightbox-prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex - 1);
+        });
+
+        document.getElementById('lightbox-next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex + 1);
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+            else if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+            else if (e.key === 'Escape') lightbox.classList.remove('active');
+        });
     </script>
 </body>
 
