@@ -86,7 +86,7 @@ h2 {
     padding: 15px;
     cursor: pointer;
     text-align: center;
-    flex: 0 1 calc((100% - 40px) / 3);
+    /* flex: 0 1 calc((100% - 40px) / 3); */
     min-width: 250px;
 }
 
@@ -128,13 +128,21 @@ h2 {
     margin-top: 10px;
 }
 
-.main .p a {
+.main p{
+    margin: 20px 0;
+}
+
+.main ul {
+    margin-left: 20px;
+}
+
+.main a {
     text-decoration: none;
-    color: rgb(142, 52, 96);
+    color: rgb(142, 52, 96) !important;
     font-weight: bold;
 }
 
-.main .p a:hover {  
+.main a:hover {  
     text-decoration: underline;
 }
 
