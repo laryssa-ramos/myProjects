@@ -1,284 +1,361 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="N2ub9n0Anwo7Tf3fQ98S7A5-P0nj4LLBct0OIeCew5M" />
+  <meta name="description" content="Portfólio de Laryssa Ramos — Gestora de TI e Desenvolvedora de Software. Sites, blogs e sistemas com Angular, SpringBoot e PostgreSQL." />
   <title>Laryssa Ramos - Portfólio</title>
   <link rel="stylesheet" href="styles/header.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/font-awesome/css/all.min.css" />
-  <link rel="stylesheet" href="styles/font-awesome/css/" />
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
 </head>
 
 <body>
   <header class="header">
-    <a href="index.html">
+    <a href="index.html" class="logo-link">
       <div class="logo-container">
         <span class="logo up">Laryssa</span>
         <span class="logo down">Ramos</span>
       </div>
     </a>
+
+    <nav class="nav" id="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#skills">Tecnologias</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <h1>Portfólio</h1>
-  <br>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Olá, eu sou</p>
+      <h1 class="hero-name">Laryssa Ramos</h1>
+      <p class="hero-role">Gestora de TI e Desenvolvedora de Software</p>
+      <p class="hero-tagline">
+        Transformo ideias em experiências digitais com código limpo e cuidado nos detalhes —
+        do front-end ao back-end.
+      </p>
+      <div class="hero-cta">
+        <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+        <a href="#contato" class="btn btn-outline">Entrar em contato</a>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span></span>
+      </div>
+    </div>
+  </section>
 
-  <div class="line"></div>
+  <section id="sobre" class="about reveal">
+    <div class="section-head">
+      <h2>Sobre mim</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Sou <strong>Gestora de TI</strong> de formação e desenvolvedora apaixonada por
+          criar produtos web que unem código limpo e design cuidadoso. Essa combinação
+          me dá uma visão ampla — entendo tanto a estratégia por trás do projeto quanto
+          o código que faz tudo funcionar.
+        </p>
+        <p>
+          Trabalho do front ao back-end, com foco em interfaces que conversam bem com o
+          usuário. Acredito que tecnologia funciona melhor quando é simples, acessível e
+          bem-feita — e é nesse equilíbrio que tento entregar cada projeto.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <strong data-count="9">0</strong>
+          <span>Projetos publicados</span>
+        </div>
+        <div class="stat">
+          <strong data-count="3">0</strong>
+          <span>Anos de código</span>
+        </div>
+        <div class="stat">
+          <strong>∞</strong>
+          <span>Cafés tomados</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>LOTS Therapy</h2>
+  <section id="skills" class="skills reveal">
+    <div class="section-head">
+      <h2>Tecnologias</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill"><i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span></div>
+      <div class="skill"><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></div>
+      <div class="skill"><i class="fab fa-js" aria-hidden="true"></i><span>JavaScript</span></div>
+      <div class="skill"><i class="fab fa-angular" aria-hidden="true"></i><span>Angular</span></div>
+      <div class="skill"><i class="fab fa-java" aria-hidden="true"></i><span>Java / SpringBoot</span></div>
+      <div class="skill"><i class="fas fa-database" aria-hidden="true"></i><span>PostgreSQL</span></div>
+      <div class="skill"><i class="fab fa-git-alt" aria-hidden="true"></i><span>Git</span></div>
+    </div>
+  </section>
 
-  <div class="page">
+  <section id="projetos" class="projects">
+    <div class="section-head reveal">
+      <h2>Projetos</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <h3 class="group-title reveal">LOTS Therapy</h3>
     <div class="container">
       <div class="box-container">
 
-        <div class="box">
+        <article class="box reveal">
           <div class="img">
-            <a href="https://lotstherapy.com.br/" target="_blank">
-              <img src="images/lotstheraoy.png" alt="LOTS Therapy" />
+            <a href="https://lotstherapy.com.br/" target="_blank" rel="noopener">
+              <img src="images/lotstheraoy.png" alt="LOTS Therapy — site institucional" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
             </a>
           </div>
-          <a href="https://lotstherapy.com.br/" target="_blank">
-            <span class="title"> LOTS Therapy Site</span>
+          <a href="https://lotstherapy.com.br/" target="_blank" rel="noopener">
+            <span class="title">LOTS Therapy Site</span>
           </a>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+            <span class="badge js">JS</span>
+          </div>
+        </article>
 
-        </div>
-
-
-        <div class="box">
+        <article class="box reveal">
           <div class="img">
-            <a href="https://catalogo.lotstherapy.com.br/" target="_blank">
-              <img src="images/catalogoLots.png" alt="LOTS Therapy" />
+            <a href="https://catalogo.lotstherapy.com.br/" target="_blank" rel="noopener">
+              <img src="images/catalogoLots.png" alt="LOTS Therapy — catálogo de produtos" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
             </a>
           </div>
-          <a href="https://catalogo.lotstherapy.com.br/" target="_blank">
-            <span class="title"> LOTS Therapy Catálogo</span>
+          <a href="https://catalogo.lotstherapy.com.br/" target="_blank" rel="noopener">
+            <span class="title">LOTS Therapy Catálogo</span>
           </a>
-          <!-- <div class="tec">
-              <span class="html">HTML</span>
-              <span class="css">CSS</span>
-            </div>  -->
-        </div>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+            <span class="badge js">JS</span>
+          </div>
+        </article>
 
-        <div class="box">
+        <article class="box reveal">
           <div class="img">
             <a href="futureProjects/lotsSystem.html">
-              <img src="images/lotsSystem/lots.png" alt="" />
+              <img src="images/lotsSystem/lots.png" alt="LOTS Therapy CMS — painel administrativo" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></span>
             </a>
           </div>
           <a href="futureProjects/lotsSystem.html">
             <span class="title">LOTS Therapy CMS</span>
           </a>
-          <!-- <div class="tec">
-            <span class="ang">Angular</span>
-            <span class="sb">SpringBoot</span>
-          </div>   -->
-        </div>
+          <div class="tec">
+            <span class="badge ang">Angular</span>
+            <span class="badge sb">SpringBoot</span>
+          </div>
+        </article>
+
       </div>
     </div>
-  
 
-  <div class="line"></div>
-
-  <h2>Dev Mina</h2>
-
-  <div class="container">
+    <h3 class="group-title reveal">Dev Mina</h3>
+    <div class="container">
       <div class="box-container">
-      <div class="box">
-        <div class="img">
-          <a href="https://devmina.vercel.app/" target="_blank">
-            <img src="images/devmina.png" alt="" />
-          </a>
-        </div>
-        <a href="https://devmina.vercel.app/" target="_blank">
-          <span class="title"> Dev Mina Blog</span>
-        </a>
-        <!-- <div class="tec">
-                <span class="html">HTML</span>
-                <span class="css">CSS</span>
-              </div>  -->
-      </div>
 
-      <div class="box">
-        <div class="img">
+        <article class="box reveal">
+          <div class="img">
+            <a href="https://devmina.vercel.app/" target="_blank" rel="noopener">
+              <img src="images/devmina.png" alt="Dev Mina — blog sobre desenvolvimento" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+            </a>
+          </div>
+          <a href="https://devmina.vercel.app/" target="_blank" rel="noopener">
+            <span class="title">Dev Mina Blog</span>
+          </a>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+            <span class="badge js">JS</span>
+          </div>
+        </article>
+
+        <article class="box reveal">
+          <div class="img">
+            <a href="futureProjects/devmina.html">
+              <img src="images/devmina/devmina.png" alt="Dev Mina CMS — painel administrativo" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></span>
+            </a>
+          </div>
           <a href="futureProjects/devmina.html">
-            <img src="images/devmina/devmina.png" alt="" />
+            <span class="title">Dev Mina CMS</span>
           </a>
-        </div>
-        <a href="futureProjects/devmina.html">
-          <span class="title">Dev Mina CMS</span>
-        </a>
-        <!-- <div class="tec">
-              <span class="ang">Angular</span>
-              <span class="sb">SpringBoot</span>
-            </div>   -->
+          <div class="tec">
+            <span class="badge ang">Angular</span>
+            <span class="badge sb">SpringBoot</span>
+          </div>
+        </article>
+
       </div>
     </div>
-  </div>
 
-  <div class="line"></div>
+    <h3 class="group-title reveal">Diário AHSD</h3>
+    <div class="container">
+      <div class="box-container">
 
-  <h2>Diário AHSD</h2>
-
-  <div class="container">
-    <div class="box-container">
-
-      <div class="box">
-        <div class="img">
-          <a href="https://diarioahsd.vercel.app/" target="_blank">
-            <img src="images/diarioahsd.png" alt="Diário AHSD" />
+        <article class="box reveal">
+          <div class="img">
+            <a href="https://diarioahsd.vercel.app/" target="_blank" rel="noopener">
+              <img src="images/diarioahsd.png" alt="Diário AHSD — blog" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+            </a>
+          </div>
+          <a href="https://diarioahsd.vercel.app/" target="_blank" rel="noopener">
+            <span class="title">Diário AHSD Blog</span>
           </a>
-        </div>
-        <a href="https://diarioahsd.vercel.app/" target="_blank">
-          <span class="title"> Diário AHSD Blog</span>
-        </a>
-        <!-- <div class="tec">
-                <span class="html">HTML</span>
-                <span class="css">CSS</span>
-              </div>  -->
-      </div>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+            <span class="badge js">JS</span>
+          </div>
+        </article>
 
-      <div class="box">
-        <div class="img">
+        <article class="box reveal">
+          <div class="img">
+            <a href="futureProjects/diarioahsd.html">
+              <img src="images/diarioahsd/diarioahsd.png" alt="Diário AHSD CMS — painel administrativo" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></span>
+            </a>
+          </div>
           <a href="futureProjects/diarioahsd.html">
-            <img src="images/diarioahsd/diarioahsd.png" alt="" />
+            <span class="title">Diário AHSD CMS</span>
           </a>
-        </div>
-        <a href="futureProjects/diarioahsd.html">
-          <span class="title">Diário AHSD CMS</span>
-        </a>
-        <!-- <div class="tec">
-              <span class="ang">Angular</span>
-              <span class="sb">SpringBoot</span>
-            </div>   -->
+          <div class="tec">
+            <span class="badge ang">Angular</span>
+            <span class="badge sb">SpringBoot</span>
+          </div>
+        </article>
+
       </div>
     </div>
 
-  </div>
+    <h3 class="group-title reveal">Outros trabalhos</h3>
+    <div class="container">
+      <div class="box-container">
 
- <div class="line"></div>
-
-  <h2>Outros Trabalhos</h2>
-
-  <div class="container">
-    <div class="box-container">
-        <div class="box">
-            <div class="img">
-              <a href="https://www.studiolucihairtherapy.com.br/" target="_blank">
-                <img src="images/lucihair.png" alt="Studio Luci Hair Therapy" />
-              </a>
-            </div>
-            <a href="https://www.studiolucihairtherapy.com.br/" target="_blank">
-              <span class="title">Studio Luci Hair Therapy</span>
+        <article class="box reveal">
+          <div class="img">
+            <a href="https://www.studiolucihairtherapy.com.br/" target="_blank" rel="noopener">
+              <img src="images/lucihair.png" alt="Studio Luci Hair Therapy" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
             </a>
-            <!-- <div class="tec">
-              <span class="html">HTML</span>
-              <span class="css">CSS</span>
-              <span class="js">JS</span>
-            </div>  -->
           </div>
-
-          <div class="box">
-            <div class="img">
-              <a href="https://neiasuspiros.vercel.app" target="_blank">
-                <img src="images/neiasuspiros.png" alt="Néia Suspiros" />
-              </a>
-            </div>
-            <a href="https://neiasuspiros.vercel.app" target="_blank">
-              <span class="title">Néia Suspiros</span>
-            </a>
-            <!-- <div class="tec">
-              <span class="html">HTML</span>
-              <span class="css">CSS</span>
-              <span class="js">JS</span>
-            </div>  -->
+          <a href="https://www.studiolucihairtherapy.com.br/" target="_blank" rel="noopener">
+            <span class="title">Studio Luci Hair Therapy</span>
+          </a>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+            <span class="badge js">JS</span>
           </div>
+        </article>
 
-          <div class="box">
-            <div class="img">
-              <a href="https://uaineia.vercel.app/" target="_blank">
-                <img src="images/uaineia.png" alt="Uai Neia" />
-              </a>
-            </div>
-            <a href="https://uaineia.vercel.app/" target="_blank">
-              <span class="title">Uai Neia</span>
+        <article class="box reveal">
+          <div class="img">
+            <a href="https://neiasuspiros.vercel.app" target="_blank" rel="noopener">
+              <img src="images/neiasuspiros.png" alt="Néia Suspiros" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
             </a>
-            <!-- <div class="tec">
-              <span class="html">HTML</span>
-              <span class="css">CSS</span>
-            </div>  -->
           </div>
-  <!-- 
-          <div class="box">
-            <div class="img">
-              <a href="https://laryssa-ramos.github.io/iron-maiden/" target="_blank">
-                <img src="images/ironmaiden.png" alt="Playlist Iron Maiden" />
-              </a>
-            </div>
-            <a href="https://laryssa-ramos.github.io/iron-maiden/" target="_blank">
-              <span class="title">Playlist Iron Maiden</span>
+          <a href="https://neiasuspiros.vercel.app" target="_blank" rel="noopener">
+            <span class="title">Néia Suspiros</span>
+          </a>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+            <span class="badge js">JS</span>
+          </div>
+        </article>
+
+        <article class="box reveal">
+          <div class="img">
+            <a href="https://uaineia.vercel.app/" target="_blank" rel="noopener">
+              <img src="images/uaineia.png" alt="Uai Neia" loading="lazy" />
+              <span class="img-overlay"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
             </a>
-            <!-- <div class="tec">
-              <span class="html">HTML</span>
-              <span class="css">CSS</span>
-            </div>  -->
-    </div> 
+          </div>
+          <a href="https://uaineia.vercel.app/" target="_blank" rel="noopener">
+            <span class="title">Uai Neia</span>
+          </a>
+          <div class="tec">
+            <span class="badge html">HTML</span>
+            <span class="badge css">CSS</span>
+          </div>
+        </article>
 
-  </div>
+      </div>
+    </div>
+  </section>
 
-</div>
-
-  <div class="line"></div>
-
-  <section class="contact" id="contact">
-    <div class="heading">
+  <section id="contato" class="contact">
+    <div class="section-head reveal">
       <h2><span>Olá</span> Mundo</h2>
+      <span class="section-rule"></span>
     </div>
 
-    <div class="contact-box">
-
+    <div class="contact-box reveal">
       <div class="image">
-        <img src="images/devMinaJava1.png" alt="Laryssa Ramos" />
+        <img src="images/devMinaJava1.png" alt="Laryssa Ramos" loading="lazy" />
       </div>
       <div class="box-contact">
         <div class="contact-info">
           <h3>Onde me encontrar:</h3>
-          <div class="info-item">
-            <h4>Email:</h4>
-            <div class="detail">
-              <div class="icon fas fa-envelope"></div>
-              <a class="email" href="mailto:laryssa.s.ramos@hotmail.com" target="_blank">laryssa.s.ramos@hotmail.com</a>
-            </div>
-          </div>
 
-          <div class="info-item">
-            <h4>Linkedin:</h4>
-            <div class="detail">
-              <div class="icon fab fa-linkedin"></div>
-              <a class="linkedin" href="https://www.linkedin.com/in/laryssa-souza-ramos/"
-                target="_blank">https://www.linkedin.com/in/laryssa-souza-ramos/</a>
+          <a class="info-item" href="mailto:laryssa.s.ramos@hotmail.com">
+            <div class="icon fas fa-envelope" aria-hidden="true"></div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <span>laryssa.s.ramos@hotmail.com</span>
             </div>
-          </div>
+          </a>
 
-          <div class="info-item">
-            <h4>Github:</h4>
-            <div class="detail">
-              <div class="icon fab fa-github"></div>
-              <a href="https://github.com/laryssa-ramos" target="_blank">https://github.com/laryssa-ramos</a>
+          <a class="info-item" href="https://www.linkedin.com/in/laryssa-souza-ramos/" target="_blank" rel="noopener">
+            <div class="icon fab fa-linkedin" aria-hidden="true"></div>
+            <div class="info-text">
+              <h4>LinkedIn</h4>
+              <span>linkedin.com/in/laryssa-souza-ramos</span>
             </div>
-          </div>
+          </a>
+
+          <a class="info-item" href="https://github.com/laryssa-ramos" target="_blank" rel="noopener">
+            <div class="icon fab fa-github" aria-hidden="true"></div>
+            <div class="info-text">
+              <h4>GitHub</h4>
+              <span>github.com/laryssa-ramos</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-
   </section>
 
   <div id="footer"></div>
 
-</body>
+  <button class="back-top" id="back-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-<script src="js/loader.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/main.js"></script>
+</body>
 
 </html>
