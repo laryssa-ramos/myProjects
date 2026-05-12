@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /components/
 
-Sitemap: https://laryssaramos.vercel.app/sitemap.xml
+Sitemap: https://laryssaramos.dev.br/sitemap.xml
